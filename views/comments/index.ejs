@@ -1,0 +1,11 @@
+<%- include('partials/head') %> 
+<body>
+    <h1>comments</h1>
+    <ul>
+        <% for(com of comments) {%>  
+            <li><%=com.username%>--- <%= com.comment %> <a href="/comments/<%=com.id%> ">details</a> <a href="/comments/<%=com.id%>/edit ">edit</a> </li>
+        <% } %> 
+    </ul>
+    <a href="/comments/new">create a new comment</a>
+</body>
+</html>

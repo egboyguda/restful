@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Comment id:<%= userBody.id %> </h1>
+    <p>Username:<%= userBody.username %> </p>
+    <p>comment:<%= userBody.comment %> </p>
+    <form action="/comments/<%= userBody.id %>?_method=PATCH" method="post" >
+        <label for="comment">Update Comment:</label>
+        <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        <input type="submit" value="submit">
+    </form>
+    <a href="/comments">go back to comments</a>
+</body>
+</html>
